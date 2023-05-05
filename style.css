@@ -1,0 +1,32 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.fundo {
+  background-color: black;
+  width: 50vh; /* aumente a largura */
+  max-width: 500px;
+  max-height: 500px;
+  height: 50vh;
+  margin: 0 auto;
+  margin-top: 8%;
+}
+h1{
+	text-align: center;
+}
+
+.botao{
+	position: relative;
+	top: -2px;
+	right: 3px;
+	width: 109px;
+	height: 109px;
+	font-size: 25px;
+	cursor: pointer;
+	background-color: white;
+	color: black;
+	border: none;
+}
+.botao:hover{
+	background-color: gray;
+}
