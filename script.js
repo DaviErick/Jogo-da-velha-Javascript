@@ -1,8 +1,13 @@
 var numerosIndisponiveis = [];
 var posicaoX = [];
 var posicaoY = [];
+var jogoAcabou = false;
 
 function clicar(num, posicao) {
+  if (jogoAcabou) {
+    return;
+  }
+
   num.innerHTML = 'X';
   numerosIndisponiveis.push(posicao);
   posicaoX.push('.n' + posicao);
@@ -14,7 +19,6 @@ function clicar(num, posicao) {
     empate();
   }
 }
-
 function oponente() {
   var numeroAleatorio;
   do {
@@ -36,6 +40,7 @@ function verificaVitoria() {
       (posicaoX.includes('.n3') && posicaoX.includes('.n5') && posicaoX.includes('.n7')) ||
        (posicaoX.includes('.n3') && posicaoX.includes('.n6') && posicaoX.includes('.n9'))) {
     alert('O X ganhou');
+    jogoAcabou = true;
     empate(e);
   } if 
   ((posicaoY.includes('.n1') && posicaoY.includes('.n2') && posicaoY.includes('.n3')) ||
@@ -47,11 +52,12 @@ function verificaVitoria() {
       (posicaoY.includes('.n3') && posicaoY.includes('.n5') && posicaoY.includes('.n7')) ||
        (posicaoY.includes('.n3') && posicaoY.includes('.n6') && posicaoY.includes('.n9'))) {
     alert('O Y ganhou');
+    jogoAcabou = true;
     empate(e);
   } 
-  
 }
 function empate(e){
     alert('Empate')
+    jogoAcabou = true;
     e.stopPropagation(e);
   }

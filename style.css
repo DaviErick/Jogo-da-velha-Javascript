@@ -1,6 +1,7 @@
 *{
 	margin: 0;
 	padding: 0;
+	font-family: cursive;
 }
 .fundo {
   background-color: black;
@@ -30,6 +31,20 @@ h1{
 .botao:hover{
 	background-color: gray;
 }
+@media screen and (max-width: 1400px){
+	.botao{
+	position: relative;
+	top: -2px;
+	right: 3px;
+	width: 120px;
+	height: 120px;
+	font-size: 25px;
+	cursor: pointer;
+	background-color: white;
+	color: black;
+	border: none;
+}
+}
 @media screen and (max-width: 1024px){
 	.botao{
 	position: relative;
@@ -43,6 +58,4 @@ h1{
 	color: black;
 	border: none;
 }
-
-
 }
